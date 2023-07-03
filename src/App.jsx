@@ -1,9 +1,9 @@
-import Window from "./components/Window";
+import Users from "./components/Users";
 
 function App() {
     return (
         <>
-            <Window />
+            <Users />
         </>
     )
 }

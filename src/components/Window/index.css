@@ -1,0 +1,9 @@
+.window {
+    height: 400px;
+    border: 2px solid;
+}
+
+.window_btn_container {
+    display: flex;
+    justify-content: flex-end;
+}

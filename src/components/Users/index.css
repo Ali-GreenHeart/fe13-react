@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+}
+
+.darkContainer,
+.darkContainer * {
+    background-color: black !important;
+    color: white !important;
+}

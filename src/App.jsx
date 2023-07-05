@@ -1,12 +1,9 @@
-import { useState } from "react";
-import Circle from "./components/Circle";
+import Calculator from "./components/Calculator";
 
 function App() {
-    const [showCircle, setShowCircle] = useState(false)
     return (
         <>
-            <button onClick={() => setShowCircle(!showCircle)}>toggle</button>
-            {showCircle && <Circle />}
+            <Calculator />
         </>
     )
 }

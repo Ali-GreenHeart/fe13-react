@@ -1,9 +1,12 @@
+import { useState } from "react";
 import Circle from "./components/Circle";
 
 function App() {
+    const [showCircle, setShowCircle] = useState(false)
     return (
         <>
-            <Circle />
+            <button onClick={() => setShowCircle(!showCircle)}>toggle</button>
+            {showCircle && <Circle />}
         </>
     )
 }

@@ -3,10 +3,10 @@ import { useEffect, useState } from "react"
 const Circle = () => {
     const [color, setColor] = useState("error")
     useEffect(() => {
-        console.log('xos geldin...')
+        setColor(localStorage.getItem('color_circle'))
     }, [])
     useEffect(() => {
-        console.log('color-i deyisdin!')
+        localStorage.setItem('color_circle', color)
     }, [color])
 
     return (

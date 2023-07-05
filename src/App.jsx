@@ -1,9 +1,9 @@
-import Users from "./components/Users";
+import Circle from "./components/Circle";
 
 function App() {
     return (
         <>
-            <Users />
+            <Circle />
         </>
     )
 }

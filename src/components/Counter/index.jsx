@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Counter() {
-    const [counter, setCounter] = useState(0)
+    const [counter, setCounter] = useState(0) // hook use*
     return (
         <>
             <h1>{counter}</h1>

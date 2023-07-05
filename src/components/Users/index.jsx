@@ -1,23 +1,31 @@
 import axios from "axios"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./index.css"
 
 const url = `https://jsonplaceholder.typicode.com/users`
-let componentYarandimi = false
 const Users = () => {
     const [users, setUsers] = useState([])
     const [isDark, setIsDark] = useState(false)
 
 
-    if (componentYarandimi === false) {
+    // [] -> dep list bos olanda mount-dur
+    useEffect(() => {
+        console.log('men geldim....')
+    }, [])
+    useEffect(() => {
+        console.log('users-i deyisdin aa, ele bilme gormedim!')
+    }, [users])
+    useEffect(() => {
+        console.log('gozlerinden mugayat ol!')
+    }, [isDark])
+
+    useEffect(() => {
         axios.get(url).then(({ data }) => {
             setUsers(data)
-            componentYarandimi = true
             let fromStorage = localStorage.getItem('isDark')
             setIsDark(fromStorage === "true" ? true : false)
         })
-    }
-
+    }, [])
 
 
     return (

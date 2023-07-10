@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { useState } from "react"
+import PageContainer from "../PageContainer"
 
 const Calculator = () => {
     const [input, setInput] = useState({ ed1: 0, ed2: 0 })
@@ -23,7 +24,7 @@ const Calculator = () => {
     }
 
     return (
-        <>
+        <PageContainer>
             <input
                 value={input.ed1}
                 type="text"
@@ -42,7 +43,7 @@ const Calculator = () => {
             <button onClick={() => handleOperatorClick('-')}>-</button>
             <button onClick={() => handleOperatorClick('/')}>/</button>
             <button onClick={() => handleOperatorClick('*')}>*</button>
-        </>
+        </PageContainer>
     )
 }
 export default Calculator

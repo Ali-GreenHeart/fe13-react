@@ -3,6 +3,7 @@ import Home from "../pages/Home"
 import About from "../pages/About"
 import Calculator from "../components/Calculator"
 import Users from "../components/Users"
+import UserSingle from "../pages/UserSingle"
 
 const Routing = () => {
     return (
@@ -12,6 +13,7 @@ const Routing = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/calculator" element={<Calculator />} />
                 <Route path="/users" element={<Users />} />
+                <Route path="/users/:id" element={<UserSingle />} />
             </Routes>
         </>
     )

@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import "./index.css"
 import PageContainer from "../PageContainer"
+import { Link } from "react-router-dom"
 
 const url = `https://jsonplaceholder.typicode.com/users`
 const Users = () => {
@@ -44,7 +45,7 @@ const Users = () => {
                 >{isDark ? '🌞' : '🌝'}</button>
                 {
                     users.map((user) => {
-                        return <div key={user.id}>
+                        return <Link to={`/users/${user.id}`} key={user.id}>
                             <h1>
                                 <button
                                     onClick={() => {
@@ -53,7 +54,7 @@ const Users = () => {
                                 >x</button>
                                 {user.username}
                             </h1>
-                        </div>
+                        </Link>
                     })
                 }
             </div>

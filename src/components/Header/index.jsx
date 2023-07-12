@@ -1,8 +1,7 @@
-import { NavLink } from "react-router-dom";
-import "./header.css"
-import NavLinkByRahib from "../NavLinkByRahib";
 import { useContext } from "react";
 import { FN_Context } from "../../context/FullNameContext";
+import NavLinkByRahib from "../NavLinkByRahib";
+import "./header.css";
 
 function Header() {
     const { ad } = useContext(FN_Context)

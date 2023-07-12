@@ -7,3 +7,27 @@ body {
     background-color: black !important;
     color: white !important;
 }
+
+.greenContainer,
+.greenContainer * {
+    background-color: green !important;
+    color: white !important;
+}
+
+.purpleContainer,
+.purpleContainer * {
+    background-color: purple !important;
+    color: white !important;
+}
+
+.blueContainer,
+.blueContainer * {
+    background-color: rgb(73, 185, 229) !important;
+    color: black !important;
+}
+
+.naneContainer,
+.naneContainer * {
+    background-color: rgb(62, 139, 10) !important;
+    color: white !important;
+}

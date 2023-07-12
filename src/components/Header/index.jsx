@@ -6,16 +6,10 @@ import { DarkModeContext } from "../../context/DarkModeContext";
 
 function Header() {
     const { ad } = useContext(FN_Context)
-    const [mode, setMode] = useContext(DarkModeContext)
+    const [emoji, handleModeChange] = useContext(DarkModeContext)
     return <nav>
         <p style={{ margin: 0 }}>Xos gelifsen, {ad}</p>
-        <button
-            onClick={() => {
-                let newMode = (mode === 'dark' ? 'light' : 'dark')
-                setMode(newMode)
-                localStorage.setItem('mode', newMode)
-            }}
-        >{mode === 'dark' ? '🌞' : '🌝'}</button>
+        <button onClick={handleModeChange}>{emoji}</button>
         <NavLinkByRahib title="Home" to="/" />
         <NavLinkByRahib title="About" to="/about" />
         <NavLinkByRahib title="calculator" to="/calculator" />

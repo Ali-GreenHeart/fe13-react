@@ -5,6 +5,7 @@ import Calculator from "../components/Calculator"
 import Users from "../components/Users"
 import UserSingle from "../pages/UserSingle"
 import UsersWithReducer from "../pages/UsersWithReducer"
+import CounterWithReducer from "../components/CounterWithReducer"
 
 const Routing = () => {
     return (
@@ -14,6 +15,7 @@ const Routing = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/calculator" element={<Calculator />} />
                 <Route path="/users" element={<Users />} />
+                <Route path="/counter-with-reducer" element={<CounterWithReducer />} />
                 <Route path="/users-with-reducer" element={<UsersWithReducer />} />
                 <Route path="/users/:id" element={<UserSingle />} />
             </Routes>

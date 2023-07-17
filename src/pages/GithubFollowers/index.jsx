@@ -26,6 +26,7 @@ const GithubFollowers = ({ }) => {
             <div className={styles.pageContainer}>
                 {
                     followers.map((follower) => <Follower
+                        key={follower.id}
                         follower={follower}
                         dispatch={dispatch}
                         styles={styles}

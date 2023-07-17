@@ -1,3 +1,5 @@
+import { _actions } from "./reducer"
+
 const Follower = ({ follower, styles, dispatch }) => {
     return (
         <div className={styles.container} key={follower.id}>

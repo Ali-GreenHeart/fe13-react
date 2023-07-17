@@ -6,6 +6,7 @@ import Users from "../components/Users"
 import UserSingle from "../pages/UserSingle"
 import UsersWithReducer from "../pages/UsersWithReducer"
 import CounterWithReducer from "../components/CounterWithReducer"
+import GithubFollowers from "../pages/GithubFollowers"
 
 const Routing = () => {
     return (
@@ -16,6 +17,7 @@ const Routing = () => {
                 <Route path="/calculator" element={<Calculator />} />
                 <Route path="/users" element={<Users />} />
                 <Route path="/counter-with-reducer" element={<CounterWithReducer />} />
+                <Route path="/github-followers" element={<GithubFollowers />} />
                 <Route path="/users-with-reducer" element={<UsersWithReducer />} />
                 <Route path="/users/:id" element={<UserSingle />} />
             </Routes>

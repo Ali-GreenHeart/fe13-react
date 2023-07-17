@@ -5,7 +5,7 @@ const PageContainer = ({ children }) => {
     return (
         <>
             <Header />
-            <p className="link">bread crumb</p>
+            {/* <p className="link">bread crumb</p> */}
             <div>{children}</div>
             <Footer />
         </>

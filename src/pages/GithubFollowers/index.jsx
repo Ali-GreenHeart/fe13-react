@@ -3,6 +3,7 @@ import PageContainer from "../../components/PageContainer"
 import axios from "axios"
 import styles from "./index.module.css"
 import { _actions, githubFollowersReducer } from "./reducer"
+import Follower from "./Follower"
 
 const url = 'https://api.github.com/users/Ali-GreenHeart/followers'
 
@@ -24,22 +25,12 @@ const GithubFollowers = ({ }) => {
             >add follower</button>
             <div className={styles.pageContainer}>
                 {
-                    followers.map((follower) => {
-                        return <div className={styles.container} key={follower.id}>
-                            <img src={follower.avatar_url} alt="" />
-                            <a target="_blank" href={follower.html_url}> {follower.login} </a>
-                            <button
-                                onClick={() => {
-                                    dispatch({ type: _actions.delete_follower, payload: follower.id })
-                                }}
-                            >delete user</button>
-                            <button
-                                onClick={() => {
-                                    dispatch({ type: _actions.edit_follower, payload: follower })
-                                }}
-                            >edit user</button>
-                        </div>
-                    })
+                    followers.map((follower) => <Follower
+                        follower={follower}
+                        dispatch={dispatch}
+                        styles={styles}
+                    />
+                    )
                 }
             </div>
         </PageContainer>

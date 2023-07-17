@@ -1,46 +1,13 @@
-import { useEffect, useReducer, useState } from "react"
+import { useEffect, useReducer } from "react"
 import PageContainer from "../../components/PageContainer"
 import axios from "axios"
 import styles from "./index.module.css"
-import { v4 } from 'uuid'
+import { _actions, githubFollowersReducer } from "./reducer"
 
 const url = 'https://api.github.com/users/Ali-GreenHeart/followers'
 
-const _actions = {
-    get_followers: 0,
-    delete_follower: 1,
-    edit_follower: 2,
-    add_follower: 3
-}
-
-const reducer = (state, action) => {
-    switch (action.type) {
-        case _actions.get_followers:
-            return action.payload;
-        case _actions.delete_follower:
-            return state.filter((follower) => follower.id !== action.payload)
-        case _actions.edit_follower:
-            return state.map((follower) => {
-                if (follower.id === action.payload.id) {
-                    return { ...follower, login: prompt('enter new name: ', follower.login) }
-                }
-                return follower;
-            })
-        case _actions.add_follower:
-            return state.concat({
-                id: v4(),
-                login: prompt('enter follower name'),
-                html_url: prompt('enter follower github url'),
-                avatar_url: prompt("enter follower image")
-            })
-        default:
-            throw new Error("ay qa, action adini sehv yazmisan!")
-    }
-}
-
 const GithubFollowers = ({ }) => {
-    const [followers, dispatch] = useReducer(reducer, [])
-
+    const [followers, dispatch] = useReducer(githubFollowersReducer, [])
 
     // IIFE
     useEffect(() => {

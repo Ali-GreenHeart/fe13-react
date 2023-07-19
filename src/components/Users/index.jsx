@@ -30,9 +30,12 @@ const Users = () => {
     }, [])
 
 
+    if (users.length === 0) {
+        return <p>loading....</p>
+    }
+
     return (
         <PageContainer>
-
             <div
                 className={isDark ? "darkContainer" : null}
             >
